@@ -4,9 +4,12 @@ rpi_charlcd
 Raspberry Pi GPIO Char LCD library, forked from [Adafruit
 Industries](https://github.com/adafruit/Adafruit-Raspberry-Pi-Python-Code/tree/master/Adafruit_CharLCD).
 
-Fork changes include:
 
-- PEP8 compliant code
+Fork changes
+------------
+
+- PEP8 compliant coding style and naming
+- Switched to new-style class
 
 
 License
