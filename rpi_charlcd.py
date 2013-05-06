@@ -71,13 +71,13 @@ class CharLCD(object):
             self.pin_rs = pin_rs
             self.pin_e = pin_e
             self.pins_db = pins_db
-
             self.GPIO.setmode(GPIO.BCM)
-            self.GPIO.setup(self.pin_e, GPIO.OUT)
-            self.GPIO.setup(self.pin_rs, GPIO.OUT)
 
-            for pin in self.pins_db:
-                self.GPIO.setup(pin, GPIO.OUT)
+        self.GPIO.setup(self.pin_e, GPIO.OUT)
+        self.GPIO.setup(self.pin_rs, GPIO.OUT)
+
+        for pin in self.pins_db:
+            self.GPIO.setup(pin, GPIO.OUT)
 
         self.write4bits(0x33)  # initialization
         self.write4bits(0x32)  # initialization
