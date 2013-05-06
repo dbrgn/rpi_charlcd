@@ -67,11 +67,12 @@ class CharLCD(object):
         # an explicit GPIO interface to use
         if not GPIO:
             import RPi.GPIO as GPIO
-            self.GPIO = GPIO
-            self.pin_rs = pin_rs
-            self.pin_e = pin_e
-            self.pins_db = pins_db
-            self.GPIO.setmode(GPIO.BCM)
+            GPIO.setmode(GPIO.BCM)
+
+        self.GPIO = GPIO
+        self.pin_rs = pin_rs
+        self.pin_e = pin_e
+        self.pins_db = pins_db
 
         self.GPIO.setup(self.pin_e, GPIO.OUT)
         self.GPIO.setup(self.pin_rs, GPIO.OUT)
